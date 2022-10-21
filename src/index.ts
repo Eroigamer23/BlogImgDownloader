@@ -10,13 +10,13 @@ const PORT = process.env.PORT || 8000 //Port
 const app = express()
 app.use(cors())
 
-app.get('/', (req:express.Request, res:express.Response) => {
-    try{
-        return res.send(listEndpoints(app).map((entry:any) => `API at http://localhost:${PORT}${entry['path']} `))
-    }catch(err){
-        return res.send(err)
-    }
-})
+// app.get('/', (req:express.Request, res:express.Response) => {
+//     try{
+//         return res.send(listEndpoints(app).map((entry:any) => `API at http://localhost:${PORT}${entry['path']} `))
+//     }catch(err){
+//         return res.send(err)
+//     }
+// })
 
 app.get('/everiaDownloader',  async(req:express.Request, res:express.Response) => {
 
