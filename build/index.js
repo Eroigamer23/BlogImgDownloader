@@ -44,14 +44,6 @@ const listEndpoints = require('express-list-endpoints');
 const PORT = 8000;
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
-app.get('/', (req, res) => {
-    try {
-        return res.send(listEndpoints(app).map((entry) => `API at http://localhost:${PORT}${entry['path']} `));
-    }
-    catch (err) {
-        return res.send(err);
-    }
-});
 app.get('/everiaDownloader', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     if (req.method != 'GET') {
         res.status(405).send('HTTP Method ' + req.method + ' not allowed');
