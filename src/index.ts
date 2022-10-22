@@ -6,7 +6,7 @@ import * as fs from 'fs'
 
 const listEndpoints = require('express-list-endpoints')
 
-const PORT = 8000
+const PORT = process.env.PORT || 8000
 const app = express()
 app.use(cors())
 
