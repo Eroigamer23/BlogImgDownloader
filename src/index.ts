@@ -37,7 +37,7 @@ app.get('/everiaDownloader',  async(req:express.Request, res:express.Response) =
             return res.status(response.code).send(response.error)
         }
     }catch(err){
-        // console.log(err)
+        console.log(err)
         res.send({status:"Fail", error: err})
     }
 })
@@ -66,7 +66,7 @@ app.get('/micmicidolDownloader',  async(req:express.Request, res:express.Respons
             })
         })
     }catch(err){
-        // console.log(err)
+        console.log(err)
        return res.send({status:"Fail", error: err})
     }
 })
